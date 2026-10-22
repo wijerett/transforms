@@ -23,6 +23,43 @@
     <p>Rotate 0.3 turn</p>
     <img class="rotate-by-turn" src="https://www.theodinproject.com/mstile-70x70.png" alt="top logo" />
 
+    <style>
+        @keyframes orbit {
+            from {
+            transform:
+                rotate(0deg)
+                translateX(180px);
+            }
+            to {
+            transform:
+                rotate(360deg)
+                translateX(180px);
+            }
+        }
+        
+        @media (
+            prefers-reduced-motion: no-preference
+        ) {
+            .moon {
+            animation:
+                orbit 6000ms linear infinite;
+            }
+        }
+        .inline-fella {
+            transform: rotate(-10deg);
+        }
+    </style>
+
+    <div class="wrapper">
+        <div class="planet"></div>
+        <div class="moon"></div>
+    </div>
+
+
+    <p>
+        Why
+        <span class="inline-fella" >Hello </span>there!
+    </p>
 
 </body>
 </html>
