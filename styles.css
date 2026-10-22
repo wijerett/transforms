@@ -14,7 +14,11 @@
 }
 
 .rotate-by-turn {
-    transform: rotate(.25turn);
+    transition: transform 1s 0.25s;
+}
+
+.rotate-by-turn:hover {
+    transform: rotate(90deg);
 }
 
 body {
@@ -35,37 +39,31 @@ div, * + p {
     margin-top: 1.5rem;
 }
 
-
-
-.wrapper {
-  position: relative;
-  width: 100px;
-  margin-left: 60px;
+#transition-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
 }
 
-.planet {
-  width: 80px;
-  height: 80px;
-  background: dodgerblue;
-  border-radius: 50%;
+button {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2% 5% 2% 5%;
+    background-color: white;
+    color: white;
+    transition-property: background-color;
+    transition-duration: 1s;
+    background-color: #cccccc;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out;
 }
 
-.moon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 20px;
-  height: 20px;
-  background: silver;
-  border-radius: 50%;
-}
-
-.inline-fella {
-    /*added display: inline-block; to ensure the transform works*/
-    display: inline-block;
-    background: hsl(50deg, 90%, 80%);
-    padding: 4px;
+button:hover {
+    background-color: red;
+    width: 300px;
+    cursor: pointer;
 }
