@@ -1,20 +1,22 @@
 
 
 .original {
-    transform: translateX(50% + 50px);
+    transform: translate(20px);
 }
 
 .rotate-by-deg {
-    transform: perspective(100px) translateZ(50px);
+    transform: skew(45deg);
     
 }
 
 .rotate-by-rad {
-    transform: perspective(250px) translateZ(-200px);
+    transform: rotate(-1rad);
+    transform: scaleY(1.5);
 }
 
 .rotate-by-turn {
-    transform: rotate(.25turn);
+    transform: rotate(0.3turn);
+    transform: scale(0.25, 1.5);
 }
 
 body {
@@ -33,39 +35,4 @@ img {
 
 div, * + p {
     margin-top: 1.5rem;
-}
-
-
-
-.wrapper {
-  position: relative;
-  width: 100px;
-  margin-left: 60px;
-}
-
-.planet {
-  width: 80px;
-  height: 80px;
-  background: dodgerblue;
-  border-radius: 50%;
-}
-
-.moon {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  width: 20px;
-  height: 20px;
-  background: silver;
-  border-radius: 50%;
-}
-
-.inline-fella {
-    /*added display: inline-block; to ensure the transform works*/
-    display: inline-block;
-    background: hsl(50deg, 90%, 80%);
-    padding: 4px;
 }
