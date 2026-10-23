@@ -4,69 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <h1>Welcome to My Website</h1>
-    <p>This is a paragraph of text on a simple HTML page.</p>
-
-    <p>Original</p>
-    <img class="original" src="https://www.theodinproject.com/mstile-70x70.png" alt="top logo" />
-
-    <p>Rotate by 45 degrees</p>
-    <img class="rotate-by-deg" src="https://www.theodinproject.com/mstile-70x70.png" alt="top logo" />
-
-    <p>Rotate by -1 radian</p>
-    <img class="rotate-by-rad" src="https://www.theodinproject.com/mstile-70x70.png" alt="top logo" />
-
-    <p>Rotate 0.3 turn</p>
-    <img class="rotate-by-turn" src="https://www.theodinproject.com/mstile-70x70.png" alt="top logo" />
-
-    <style>
-        @keyframes orbit {
-            from {
-            transform:
-                rotate(0deg)
-                translateX(180px);
-            }
-            to {
-            transform:
-                rotate(360deg)
-                translateX(180px);
-            }
-        }
-        
-        @media (
-            prefers-reduced-motion: no-preference
-        ) {
-            .moon {
-            animation:
-                orbit 6000ms linear infinite;
-            }
-        }
-        .inline-fella {
-            transform: rotate(-10deg);
-        }
-    </style>
-
-    <div class="wrapper">
-        <div class="planet"></div>
-        <div class="moon"></div>
-    </div>
-
-
-    <p>
-        Why
-        <span class="inline-fella" >Hello </span>there!
-    </p>
-
-    <div class="red-box"></div>
-    <div class="blue-box"></div>
-
-    <div class="original">
-        <div id="transform-origin"></div>
-    </div>
-
+  <div class="box delay-1">0.5 seconds</div>
+  <div class="box delay-2">2 seconds</div>
+  <div class="box delay-3">4 seconds</div>
+  <button id="change">Change</button>
+  
+   
+  <script src="script.js" ></script>
 </body>
 </html>
