@@ -10,25 +10,27 @@
 <body>
 
 
+<button class="btn">
+  Hello World
+</button>
+
 <style>
-  .wrapper {
-    display: flex;
+  .btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    background: slateblue;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
   }
-  .second.box {
-    z-index: 1;
-    background: hotpink;
-    margin-top: 20px;
-    margin-left: -20px;
-    margin-right: -20px;
+  
+  .btn:hover {
+    transform: translateY(-10px);
   }
 </style>
-
-<div class="wrapper">
-  <div class="first box"></div>
-  <div class="second box"></div>
-  <div class="third box"></div>
-</div>
-
    
   <script src="./script.js" defer></script>
 </body>
