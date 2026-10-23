@@ -8,12 +8,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="box delay-1">0.5 seconds</div>
-  <div class="box delay-2">2 seconds</div>
-  <div class="box delay-3">4 seconds</div>
-  <button id="change">Change</button>
-  
+
+
+  <div>
+  <div></div>
+  </div>
+  <ul>
+  <li>
+    <button class="animation-button">Start animation</button>
+  </li>
+  <li>
+    <label for="easing-select">Choose an easing function:</label>
+    <select id="easing-select">
+      <option selected>linear</option>
+      <option>linear(0, 0.5 50%, 1)</option>
+      <option>ease</option>
+      <option>ease-in</option>
+      <option>ease-in-out</option>
+      <option>ease-out</option>
+      <option>cubic-bezier(0.1, -0.6, 0.2, 0)</option>
+      <option>cubic-bezier(0, 1.1, 0.8, 4)</option>
+      <option>steps(5, end)</option>
+      <option>steps(3, start)</option>
+      <option>steps(4)</option>
+    </select>
+  </li>
+</ul>
+
    
-  <script src="script.js" ></script>
+  <script src="./script.js" defer></script>
 </body>
 </html>

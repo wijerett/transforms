@@ -1,12 +1,20 @@
 
 
+const selectElem = document.querySelector("select");
+const startBtn = document.querySelector("button");
+const divElem = document.querySelector("div > div");
 
-function change() {
-  const elements = document.querySelectorAll("div.box");
-  for (const element of elements) {
-    element.classList.toggle("transformed-state");
+startBtn.addEventListener("click", () => {
+  if (startBtn.textContent === "Start animation") {
+    divElem.style.animationName = "move-right";
+    startBtn.textContent = "Stop animation";
+    divElem.style.animationTimingFunction = selectElem.value;
+  } else {
+    divElem.style.animationName = "unset";
+    startBtn.textContent = "Start animation";
   }
-}
+});
 
-const changeButton = document.querySelector("#change");
-changeButton.addEventListener('click', change);
+selectElem.addEventListener("change", () => {
+  divElem.style.animationTimingFunction = selectElem.value;
+});

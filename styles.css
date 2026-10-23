@@ -1,36 +1,36 @@
-
-
-.box {
-  margin: 20px;
-  padding: 10px;
-  display: inline-block;
-  width: 100px;
+body > div {
+  position: relative;
   height: 100px;
-  background-color: red;
-  font-size: 18px;
-  transition-property: background-color, font-size, transform, color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 3s;
 }
 
-.transformed-state {
-  transform: rotate(270deg);
+div > div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
   background-color: blue;
-  color: yellow;
-  font-size: 12px;
-  transition-property: background-color, font-size, transform, color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 3s;
+  background-image: radial-gradient(
+    circle at 10px 10px,
+    rgb(25 255 255 / 80%),
+    rgb(25 255 255 / 40%)
+  );
+  border-radius: 50%;
+  top: 25px;
+  animation: 1.5s infinite alternate;
 }
 
-.delay-1 {
-  transition-delay: 0.5s;
+@keyframes move-right {
+  from {
+    left: 10%;
+  }
+
+  to {
+    left: 90%;
+  }
 }
 
-.delay-2 {
-  transition-delay: 2s;
-}
-
-.delay-3 {
-  transition-delay: 4s;
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
